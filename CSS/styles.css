@@ -1,0 +1,316 @@
+/* Different styles for each header */
+
+:root {
+    --body-bg-image: url('https://sadhost.neocities.org/images/tiles/greengrid.jpg');
+
+    /* colors */
+    --content: #00ff2b;
+}
+
+.index{
+    --header-image: url('headers/konata_bg.png');
+}
+
+.hegel{
+  --header-image: url('headers/mioh_header_tc.png');
+}
+
+.comp{
+  --header-image: url('headers/pony.png');
+}
+
+.misc{
+  --header-image: url('headers/emo.png');
+}
+
+.extra{
+  --header-image: url('headers/jesus.png');
+}
+
+.diary{
+  --header-image: url('headers/lain.png');
+}
+
+
+/* 
+    !!!!!!!!!!!!!! FONTS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+@font-face {
+    font-family: Garamond;
+    src: url('fonts/EBGaramond-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+    font-family: JMH;
+    src: url('fonts/jmh-cthulhumbus-arcade.cthulhumbusarcadeug-regular.ttf');
+}
+
+@font-face {
+    font-family: JMH;
+    src: url('fonts/jmh-cthulhumbus-arcade.cthulhumbusarcadeug-regular.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: JMH;
+    src: url('fonts/jmh-cthulhumbus-arcade.cthulhumbusarcadeug-regular.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: JMH;
+    src: url('fonts/jmh-cthulhumbus-arcade.cthulhumbusarcadeug-regular.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'JMH', sans-serif;
+    background-color: #08031A;
+    /* you can delete the line below if you'd prefer to not use an image */
+    background-size: 65px;
+    color: #fceaff;
+    background-image: var(--body-bg-image);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* below this line is CSS for the layout */
+
+/* this is a CSS comment
+to uncomment a line of CSS, remove the * and the /
+before and after the text */
+
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+the other elements, you will need to move that div outside
+of the container */
+
+#container {
+    max-width: 12000px;
+    /* this is the width of your layout! */
+    /* if you change the above value, scroll to the bottom
+and change the media query according to the comment! */
+    margin: 0 auto;
+    /* this centers the entire page */
+    border-image-slice: 25 25 25 25;
+    border-image-width: 10px 10px 10px 10px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://sadhost.neocities.org/images/tiles/greytile01.jpg");
+    border-style: solid;
+}
+
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+    color: #ED64F5;
+    font-weight: bold;
+    /* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
+
+#header {
+    background-color: transparent;
+    height: 100px; /* Specify a valid height value */
+    background-image: var(--header-image);
+    background-size: cover; /* This will maintain the aspect ratio and cover the entire header */
+    
+    border-image-slice: 25 25 25 25;
+    border-image-width: 5px 0px 5px 0px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://sadhost.neocities.org/images/tiles/greytile01.jpg");
+    
+}
+
+
+/* navigation section!! */
+#navbar {
+    height: 40px;
+    background-color: #13092D;
+    /* navbar color */
+    width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+/* navigation links*/
+#navbar li a {
+    color: #ED64F5;
+    /* navbar text color */
+    font-weight: 800;
+    text-decoration: none;
+    /* this removes the underline */
+}
+
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+    color: #a49cba;
+    text-decoration: underline;
+}
+
+#flex {
+    display: flex;
+}
+
+/* this colors BOTH sidebars
+if you want to style them separately,
+create styles for #leftSidebar and #rightSidebar */
+aside {
+    background-color: #241445;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+    /* this makes the sidebar text slightly smaller */
+}
+
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+    font-family: 'Garamond';
+    background-color: #43256E;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+    border-image-slice: 15 15 15 15;
+    border-image-width: 6px 6px 6px 6px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://sadhost.neocities.org/images/tiles/gmbg.gif");
+    border-style: solid;
+}
+
+/* what's this "order" stuff about??
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+*/ #leftSidebar {
+    order: 1;
+}
+
+#rightSidebar {
+    order: 3;
+}
+
+footer {
+    background-color: #13092D;
+    /* background color for footer */
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    /* this centers the footer text */
+}
+
+h1,
+h2,
+h3 {
+    color: #ED64F5;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+strong {
+    /* this styles bold text */
+    color: #ED64F5;
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+    background-color: #13092D;
+    border: 1px solid #ED64F5;
+    padding: 10px;
+}
+
+/* CSS for extras */
+
+#topBar {
+  width: 100%;
+  height: 30px;
+  padding: 7px;
+  font-size: smaller;
+  background-color: #13092D;
+  overflow: hidden;
+}
+
+#topBar > span {
+  display: inline-block;
+  white-space: nowrap;
+  animation: my-animation 40s linear infinite;
+  animation-delay: -13s;
+}
+
+@keyframes my-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below
+*/
+
+@media only screen and (max-width: 620px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+    main {
+        order: 1;
+        width: 100%;
+    }
+
+    #leftSidebar {
+        order: 2;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
